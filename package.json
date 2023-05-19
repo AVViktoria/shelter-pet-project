@@ -2,7 +2,7 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://AVViktoria.github.io/shelter-pet-project",
+  "homepage": "https://avviktoria.github.io/shelter-pet-project/",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /shelter-pet-project/"
