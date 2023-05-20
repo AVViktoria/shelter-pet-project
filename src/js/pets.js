@@ -2,9 +2,8 @@ const PETS = [
   {
     id: 0,
     name: 'Jennifer',
-    img: '../../assets/pets-1/jennifer.png',
-    img_2x: '../../assets/pets-2/jennifer.png',
-
+    img: '../images/pets-1/jennifer.png',
+    img_2x: '../images/pets-2/jennifer.png',
     type: 'Dog',
     breed: 'Labrador',
     description:
@@ -17,8 +16,8 @@ const PETS = [
   {
     id: 1,
     name: 'Sophia',
-    img: '../../assets/pets-1/sophia.png',
-    img_2x: '../../assets/pets-2/sophia.png',
+    img: '../images/pets-1/sophia.png',
+    img_2x: '../images/pets-2/sophia.png',
     type: 'Dog',
     breed: 'Shih tzu',
     description:
@@ -31,8 +30,8 @@ const PETS = [
   {
     id: 2,
     name: 'Woody',
-    img: '../../assets/pets-1/woody.png',
-    img_2x: '../../assets/pets-2/woody.png',
+    img: '../images/pets-1/woody.png',
+    img_2x: '../images/pets-2/woody.png',
     type: 'Dog',
     breed: 'Golden Retriever',
     description:
@@ -45,8 +44,8 @@ const PETS = [
   {
     id: 3,
     name: 'Scarlett',
-    img: '../../assets/pets-1/scarlett.png',
-    img_2x: '../../assets/pets-2/scarlett.png',
+    img: '../images/pets-1/scarlett.png',
+    img_2x: '../images/pets-2/scarlett.png',
     type: 'Dog',
     breed: 'Jack Russell Terrier',
     description:
@@ -59,8 +58,8 @@ const PETS = [
   {
     id: 4,
     name: 'Katrine',
-    img: '../../assets/pets-1/katrine.png',
-    img_2x: '../../assets/pets-2/katrine.png',
+    img: '../images/pets-1/katrine.png',
+    img_2x: '../images/pets-2/katrine.png',
     type: 'Cat',
     breed: 'British Shorthair',
     description:
@@ -73,8 +72,8 @@ const PETS = [
   {
     id: 5,
     name: 'Timmy',
-    img: '../../assets/pets-1/timmy.png',
-    img_2x: '../../assets/pets-2/timmy.png',
+    img: '../images/pets-1/timmy.png',
+    img_2x: '../images/pets-2/timmy.png',
     type: 'Cat',
     breed: 'British Shorthair',
     description:
@@ -87,8 +86,8 @@ const PETS = [
   {
     id: 6,
     name: 'Freddie',
-    img: '../../assets/pets-1/freddie.png',
-    img_2x: '../../assets/pets-2/freddie.png',
+    img: '../images/pets-1/freddie.png',
+    img_2x: '../images/pets-2/freddie.png',
     type: 'Cat',
     breed: 'British Shorthair',
     description:
@@ -101,8 +100,8 @@ const PETS = [
   {
     id: 7,
     name: 'Charly',
-    img: '../../assets/pets-1/charly.png',
-    img_2x: '../../assets/pets-2/charly.png',
+    img: '../images/pets-1/charly.png',
+    img_2x: '../images/pets-2/charly.png',
     type: 'Dog',
     breed: 'Jack Russell Terrier',
     description:
