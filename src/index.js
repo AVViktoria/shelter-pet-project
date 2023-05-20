@@ -249,7 +249,7 @@ if (menuLinks.length > 0) {
 //
 
 menuBodyWrapper.addEventListener('click', function (e) {
-  if (!e.target.closest('.meny__link')) {
+  if (!e.target.closest('.menu__link')) {
     menuIcon.classList.remove('_active');
     menuBody.classList.remove('_active');
     menuBodyWrapper.classList.remove('_active');
@@ -266,7 +266,7 @@ if (homeLink) {
   homeLink.addEventListener('click', function (e) {
     e.preventDefault();
     setTimeout(function () {
-      window.location.href = 'index.html';
+      window.location.href = './index.html';
     }, 150);
     document.body.classList.remove('_scroll-lock');
     menuIcon.classList.remove('_active');
