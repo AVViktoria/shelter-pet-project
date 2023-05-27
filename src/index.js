@@ -113,8 +113,10 @@
 //   },
 // ];
 'use strict';
-import data from './js/data.mjs';
-const PETS = [...data];
+// import data from './js/data.js';
+// const PETS = [...data];
+import { PETS } from './js/data.js';
+
 /* -------------- КОНСТАНТЫ ------------------- */
 
 const hamburger = document.querySelector('.hamburger'),
