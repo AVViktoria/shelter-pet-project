@@ -1,5 +1,3 @@
-'use strict';
-
 // const PETS = [
 //   {
 //     id: 0,
@@ -114,8 +112,10 @@
 //     parasites: ['lice', 'fleas'],
 //   },
 // ];
+'use strict';
 import data from './js/data.mjs';
-const PETS = [...data];
+// const PETS = [...data];
+const PETS = { ...data };
 /* -------------- КОНСТАНТЫ ------------------- */
 
 const hamburger = document.querySelector('.hamburger'),
@@ -135,26 +135,25 @@ const hamburger = document.querySelector('.hamburger'),
 
 /* -------------- ДИНАМИЧЕСКИ ЗАГРУЖАЕМ КАРТОЧКИ ПРИ ЗАГРУЗКЕ первой страницы------------------- */
 
-let numberOfcardsInSlide;
+// let numberOfCardsInSlide;
+let numberOfCardsInSlide = 0;
 let firstCardNumber = 0;
 
 function getNumberOfCards() {
   const width = window.innerWidth;
 
   if (width < 576) {
-    numberOfcardsInSlide = 1;
-    return numberOfcardsInSlide;
+    numberOfCardsInSlide = 1;
   } else if (width < 1201 && width >= 576) {
-    numberOfcardsInSlide = 2;
-    return numberOfcardsInSlide;
+    numberOfCardsInSlide = 2;
   } else {
-    numberOfcardsInSlide = 3;
-    return numberOfcardsInSlide;
+    numberOfCardsInSlide = 3;
   }
+
+  return numberOfCardsInSlide;
 }
 
 /* -------------- ДИНАМИЧЕСКИ ЗАГРУЖАЕМ КАРТОЧКИ ПРИ ЗАГРУЗКЕ первой страницы------------------- */
-
 window.addEventListener('load', () => {
   listLeft.innerHTML = '';
   listCenter.innerHTML = '';
@@ -164,12 +163,12 @@ window.addEventListener('load', () => {
 
   let arrOfSuperRandoms = createSuperRandomNumbers();
 
-  for (let i = 0; i < numberOfcardsInSlide; i++) {
+  for (let i = 0; i < numberOfCardsInSlide; i++) {
     const card = createCardTemplate();
     let petCardNumber = arrOfSuperRandoms[i];
     card.setAttribute('data-petnumber', petCardNumber);
     card.innerHTML = `<div class="slider__img">
-                            <img src='${PETS[petCardNumber].img}' alt="${PETS[petCardNumber].name}">
+                            <img src="${PETS[petCardNumber].img}" alt="${PETS[petCardNumber].name}">
                         </div>
                         <div class="slider__nickname">${PETS[petCardNumber].name}</div>
                         <div class="slider__info-btn">
@@ -181,12 +180,12 @@ window.addEventListener('load', () => {
 
   let newArrOfSuperRandoms = createSuperRandomNumbers();
 
-  for (let i = 0; i < numberOfcardsInSlide; i++) {
+  for (let i = 0; i < numberOfCardsInSlide; i++) {
     const card = createCardTemplate();
     let petCardNumber = newArrOfSuperRandoms[i];
     card.setAttribute('data-petnumber', petCardNumber);
     card.innerHTML = `<div class="slider__img">
-                            <img src='${PETS[petCardNumber].img}' alt="${PETS[petCardNumber].name}">
+                            <img src="${PETS[petCardNumber].img}" alt="${PETS[petCardNumber].name}">
                         </div>
                         <div class="slider__nickname">${PETS[petCardNumber].name}</div>
                         <div class="slider__info-btn">
@@ -387,7 +386,8 @@ carousel.addEventListener('animationend', animationEvent => {
                             <button class="btn btn_border" type="button">Learn more</button>
                         </div>`;
     listLeft.appendChild(card);
-    console.log(`по одному: ` + arrOfSuperRandoms[i]);
+    // console.log(`по одному: ` + arrOfSuperRandoms[i]);
+    console.log(`по одному: ` + arrOfSuperRandoms[i - 1]);
   }
 
   listRight.innerHTML = listLeft.innerHTML;

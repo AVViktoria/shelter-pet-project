@@ -2,7 +2,7 @@ const PETS = [
   {
     id: 0,
     name: 'Jennifer',
-    img: '../../assets/pets-katrine.jpg',
+    img: 'assets/pets-katrine.jpg',
     img_2x: '../images/pets-2/jennifer.png',
     type: 'Dog',
     breed: 'Labrador',
