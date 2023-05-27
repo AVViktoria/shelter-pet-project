@@ -114,8 +114,7 @@
 // ];
 'use strict';
 import data from './js/data.mjs';
-// const PETS = [...data];
-const PETS = { ...data };
+const PETS = [...data];
 /* -------------- КОНСТАНТЫ ------------------- */
 
 const hamburger = document.querySelector('.hamburger'),
