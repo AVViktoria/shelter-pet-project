@@ -170,7 +170,7 @@ window.addEventListener('load', () => {
     card.setAttribute('data-petnumber', petCardNumber);
 
     card.innerHTML = `<div class="slider__img">
-                            <img src="${PETS[petCardNumber].img}" alt="${PETS[petCardNumber].name}">
+                            <img src="${PETS[petCardNumber].img}" alt="${PETS[petCardNumber].name}" >
                         </div>
                         <div class="slider__nickname">${PETS[petCardNumber].name}</div>
                         <div class="slider__info-btn">
@@ -457,100 +457,3 @@ popUpElem.addEventListener('click', function (e) {
   } //отменяем событие на дочернем элементе
   closePopUp(); // закрывает поп-ап при клине вне модального окна
 });
-
-// 'use strict';
-
-// import data from './js/data.mjs';
-
-// const PETS = [...data];
-
-// const hamburger = document.querySelector('.hamburger');
-// const navList = document.querySelector('.nav__list');
-// const logo = document.querySelector('.logo');
-// const overlay = document.querySelector('.overlay');
-// const arrowLeft = document.querySelector('#arrow_left');
-// const arrowRight = document.querySelector('#arrow_right');
-// const carousel = document.querySelector('#carousel');
-// const listLeft = document.querySelector('#slider__list_left');
-// const listCenter = document.querySelector('#slider__list_center');
-// const listRight = document.querySelector('#slider__list_right');
-// const popUpElem = document.querySelector('.pop-up');
-// const popUpContainer = document.querySelector('.pop-up__container');
-// const popUpClose = document.querySelector('#pop-up__close');
-// const sliderPages = document.querySelector('.pets .slider__list');
-
-// let numberOfCardsInSlide;
-// let firstCardNumber = 0;
-
-// function getNumberOfCards() {
-//   const width = window.innerWidth;
-
-//   if (width < 576) {
-//     numberOfCardsInSlide = 1;
-//   } else if (width < 1201 && width >= 576) {
-//     numberOfCardsInSlide = 2;
-//   } else {
-//     numberOfCardsInSlide = 3;
-//   }
-
-//   return numberOfCardsInSlide;
-// }
-
-// window.addEventListener('load', () => {
-//   listLeft.innerHTML = '';
-//   listCenter.innerHTML = '';
-//   listRight.innerHTML = '';
-
-//   getNumberOfCards();
-
-//   let arrOfSuperRandoms = createSuperRandomNumbers();
-
-//   for (let i = 0; i < numberOfCardsInSlide; i++) {
-//     const card = createCardTemplate();
-//     let petCardNumber = arrOfSuperRandoms[i];
-//     card.setAttribute('data-petnumber', petCardNumber);
-
-//     card.innerHTML = `<div class="slider__img">
-//                             <img src="${PETS[petCardNumber].img}" alt="${PETS[petCardNumber].name}">
-//                         </div>
-//                         <div class="slider__nickname">${PETS[petCardNumber].name}</div>
-//                         <div class="slider__info-btn">
-//                             <button class="btn btn_border" type="button">Learn more</button>
-//                         </div>`;
-//     listCenter.appendChild(card);
-//     console.log(card);
-//   }
-
-//   let newArrOfSuperRandoms = createSuperRandomNumbers();
-
-//   for (let i = 0; i < numberOfCardsInSlide; i++) {
-//     const card = createCardTemplate();
-//     let petCardNumber = newArrOfSuperRandoms[i];
-//     card.setAttribute('data-petnumber', petCardNumber);
-//     card.innerHTML = `<div class="slider__img">
-//                             <img src="${PETS[petCardNumber].img}" alt="${PETS[petCardNumber].name}">
-//                         </div>
-//                         <div class="slider__nickname">${PETS[petCardNumber].name}</div>
-//                         <div class="slider__info-btn">
-//                             <button class="btn btn_border" type="button">Learn more</button>
-//                         </div>`;
-//     listLeft.appendChild(card);
-//   }
-
-//   listRight.innerHTML = listLeft.innerHTML;
-// });
-
-// const menuIcon = document.querySelector('.menu__icon');
-// const menuBody = document.querySelector('.menu__body');
-// const menuBodyWrapper = document.querySelector('.menu__body-wrapper');
-
-// if (menuIcon) {
-//   menuIcon.addEventListener('click', function (e) {
-//     document.body.classList.toggle('_scroll-lock');
-//     menuIcon.classList.toggle('_active');
-//     menuBody.classList.toggle('_active');
-//     menuBodyWrapper.classList.toggle('_active');
-//   });
-// }
-
-// const menuLinks = document.querySelectorAll('.menu__link[data-g
