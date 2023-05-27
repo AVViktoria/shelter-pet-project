@@ -113,9 +113,9 @@
 //   },
 // ];
 'use strict';
-// import data from './js/data.js';
-// const PETS = [...data];
-import { PETS } from './js/data.js';
+import data from './js/data.js';
+const PETS = [...data];
+// import { PETS } from './js/data.js';
 
 /* -------------- КОНСТАНТЫ ------------------- */
 
