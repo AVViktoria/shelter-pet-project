@@ -223,9 +223,9 @@ nextPage.addEventListener('click', () => {
   let pageNum = +currentPageNumber.innerHTML + 1;
   currentPageNumber.innerHTML = pageNum;
   sliderPages.innerHTML = '';
-  console.log(firstCardNumber);
+  // console.log(firstCardNumber);
   firstCardNumber += numberOfcardsPerPage;
-  console.log(firstCardNumber);
+  // console.log(firstCardNumber);
 
   generateCards();
 });

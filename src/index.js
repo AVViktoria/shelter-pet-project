@@ -177,7 +177,7 @@ window.addEventListener('load', () => {
                             <button class="btn btn_border" type="button">Learn more</button>
                         </div>`;
     listCenter.appendChild(card);
-    console.log(card);
+    // console.log(card);
   }
 
   let newArrOfSuperRandoms = createSuperRandomNumbers();
@@ -346,8 +346,8 @@ function createSuperRandomNumbers() {
       arrOfSuperRandoms.push(random);
     }
   }
-  console.log('used ' + arrOfUsedRandoms);
-  console.log('super: ' + arrOfSuperRandoms);
+  // console.log('used ' + arrOfUsedRandoms);
+  // console.log('super: ' + arrOfSuperRandoms);
 
   // console.log('super ' + arrOfSuperRandoms);
   return arrOfSuperRandoms;
@@ -371,14 +371,14 @@ carousel.addEventListener('animationend', animationEvent => {
   listLeft.innerHTML = '';
   let arrOfSuperRandoms = createSuperRandomNumbers();
 
-  console.log('super =  ' + arrOfSuperRandoms);
+  // console.log('super =  ' + arrOfSuperRandoms);
 
   getNumberOfCards();
 
   for (let i = 0; i < numberOfcardsInSlide; i++) {
     const card = createCardTemplate();
     let petCardNumber = arrOfSuperRandoms[i];
-    console.log(`petCardNumber - ` + petCardNumber);
+    // console.log(`petCardNumber - ` + petCardNumber);
     card.setAttribute('data-petnumber', petCardNumber);
     card.innerHTML = `<div class="slider__img">
                             <img src='${PETS[petCardNumber].img}' alt="${PETS[petCardNumber].name}">
@@ -388,7 +388,7 @@ carousel.addEventListener('animationend', animationEvent => {
                             <button class="btn btn_border" type="button">Learn more</button>
                         </div>`;
     listLeft.appendChild(card);
-    console.log(`по одному: ` + arrOfSuperRandoms[i]);
+    // console.log(`по одному: ` + arrOfSuperRandoms[i]);
   }
 
   listRight.innerHTML = listLeft.innerHTML;
@@ -400,7 +400,7 @@ carousel.addEventListener('animationend', animationEvent => {
 /* -------------- POP-UP ------------------- */
 
 function openPopUp(e) {
-  console.log(e.target.id);
+  // console.log(e.target.id);
   if (e.target.id == 'slider__list_center') {
     return true;
   }
